@@ -1,0 +1,27 @@
+{
+  "name": "puppeteer-scraping",
+  "version": "1.0.0",
+  "description": "Estudo de extração de dados usando o Headless Chrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baltazarparra/puppeteer-scraping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baltazarparra/puppeteer-scraping/issues"
+  },
+  "homepage": "https://github.com/baltazarparra/puppeteer-scraping#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0"
+  }
+}
