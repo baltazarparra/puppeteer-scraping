@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer')
+const fs = require('fs')
 
 let scrape = async () => {
   const browser = await puppeteer.launch({headless: true})
@@ -18,4 +19,10 @@ let scrape = async () => {
 }
 
 scrape()
-  .then(value => console.log(value))
+  .then((value) => {
+    value.map(function(item) {
+      fs.appendFile('cryptolist.text', `${item} \n`, (err) => {
+        if(err) console.log(err)
+      })
+    })
+  })
