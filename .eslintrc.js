@@ -4,7 +4,10 @@ module.exports = {
         "es6": true,
         "amd": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
     "parserOptions": {
         "ecmaVersion": 2017
     },
@@ -25,6 +28,17 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
-    }
+        ],
+        "prettier/prettier": [
+          "error",
+          {
+            "trailingComma": "es5",
+            "singleQuote": true,
+            "printWidth": 120
+          }
+        ],
+    },
+    "plugins": [
+      "prettier"
+    ]
 };

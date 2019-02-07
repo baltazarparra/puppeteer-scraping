@@ -1,11 +1,11 @@
-const puppeteer = require('puppeteer')
 const fs = require('fs')
+const puppeteer = require('puppeteer')
 
-let scrape = async () => {
+const scrape = async () => {
   const browser = await puppeteer.launch({headless: true})
   const page = await browser.newPage()
   await page.goto('https://coinmarketcap.com/')
-  await page.waitFor(1000)
+  await page.waitFor('.logo-sprite')
 
   const result = await page.evaluate(() => {
     const cryptos = []
@@ -13,7 +13,7 @@ let scrape = async () => {
     return cryptos
   })
 
-  browser.close()
+  await browser.close()
 
   return result
 }
